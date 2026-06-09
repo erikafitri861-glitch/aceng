@@ -1,0 +1,20 @@
+{
+  "name": "birthday-greeting-app",
+  "version": "1.0.0",
+  "description": "Aplikasi web untuk mengirim ucapan selamat ulang tahun dengan animasi dan pengalaman interaktif.",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "open src/index.html"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "keywords": [
+    "birthday",
+    "greeting",
+    "web",
+    "animation",
+    "interactive"
+  ],
+  "author": "Nama Anda",
+  "license": "MIT"
+}

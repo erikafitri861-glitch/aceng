@@ -1,0 +1,75 @@
+body {
+  background-color: #f0f8ff;
+  font-family: "Arial", sans-serif;
+  text-align: center;
+  padding: 50px;
+}
+
+h1 {
+  color: #ff69b4;
+  font-size: 3em;
+  animation: fadeIn 2s;
+}
+
+h2 {
+  color: #ff1493;
+  font-size: 2em;
+  margin-top: 20px;
+}
+
+.message {
+  font-size: 1.5em;
+  color: #4b0082;
+  margin: 20px 0;
+  animation: slideIn 1s;
+}
+
+button {
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #ff1493;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.my-photo {
+  width: 100%;
+  max-width: 360px;
+  border-radius: 16px;
+  margin: 20px auto;
+  display: block;
+}
+
+.birthday-cake {
+  width: 220px;
+  max-width: 100%;
+  display: block;
+  margin: 20px auto;
+}
