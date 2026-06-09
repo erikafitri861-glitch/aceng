@@ -59,6 +59,80 @@ button:hover {
   }
 }
 
+.birthday-photo {
+  width: 100%;
+  max-width: 360px;
+  border-radius: 20px;
+  margin: 20px auto;
+  display: block;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  animation: photoReveal 1.2s ease forwards;
+  opacity: 0;
+  transform: scale(0.85);
+}
+
+@keyframes photoReveal {
+  from {
+    opacity: 0;
+    transform: scale(0.85) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.audio-wrapper {
+  margin: 20px auto;
+  max-width: 360px;
+  text-align: center;
+}
+
+.audio-player {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+.audio-note {
+  margin-top: 8px;
+  color: #814d9c;
+  font-size: 0.95em;
+}
+
+#confetti-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 999;
+}
+
+.confetti-piece {
+  position: absolute;
+  top: -10px;
+  opacity: 0;
+  transform: translateY(0) rotate(0deg);
+  animation: confettiFall 2s ease-out forwards;
+}
+
+@keyframes confettiFall {
+  0% {
+    opacity: 0;
+    transform: translateY(0) rotate(0deg);
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(120vh) rotate(720deg);
+  }
+}
+
 .my-photo {
   width: 100%;
   max-width: 360px;

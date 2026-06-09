@@ -8,13 +8,64 @@
   </head>
   <body>
     <div class="container">
-      <h1>Untukmu yang Spesial</h1>
+      <h1>Untuk Bubieszku Tersayang</h1>
       <p>Selamat ulang tahun, sayang!</p>
-      <p>Semoga semua mimpimu tercapai dan selalu diberkahi kebahagiaan.</p>
-      <p>Kamu adalah hadiah terindah dalam hidupku. Aku sayang kamu selalu.</p>
+      <p>
+        Semoga semua mimpimu tercapai, selalu diberkahi kebahagiaan dan semoga
+        aku selalu satu-satunya dihidupmu.
+      </p>
+      <p>
+        Makasi ya udah jadi bagian yang paling seru dihidupku, aku gatau mau
+        kasih apa jadi maaf ya kalo kurang fungsional.
+      </p>
+      <p>Love u Bub</p>
+      <img
+        src="assets/images/foto halaman ke2.jpeg"
+        alt="Foto Kita"
+        class="birthday-photo"
+      />
+      <div class="audio-wrapper">
+        <audio id="birthday-audio" class="audio-player" controls preload="auto">
+          <source src="assets/audio/white-swan.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+        <p class="audio-note">
+          Jika audio tidak otomatis berjalan, tekan tombol play.
+        </p>
+      </div>
       <button onclick="location.href = 'index.html'">
         Kembali ke Halaman Utama
       </button>
     </div>
+    <div id="confetti-wrap"></div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const colors = ["#ff6b81", "#ffd93d", "#52b6ff", "#9b5cff", "#ff8c69"];
+        const count = 40;
+        for (let i = 0; i < count; i += 1) {
+          const confetti = document.createElement("div");
+          confetti.className = "confetti-piece";
+          const size = Math.floor(Math.random() * 10) + 8;
+          confetti.style.width = `${size}px`;
+          confetti.style.height = `${size * 0.4}px`;
+          confetti.style.backgroundColor =
+            colors[Math.floor(Math.random() * colors.length)];
+          confetti.style.left = `${Math.random() * 100}%`;
+          confetti.style.animationDelay = `${Math.random() * 1.2}s`;
+          confetti.style.opacity = "0.9";
+          document.getElementById("confetti-wrap").appendChild(confetti);
+        }
+
+        const audio = document.getElementById("birthday-audio");
+        if (audio) {
+          const playPromise = audio.play();
+          if (playPromise !== undefined) {
+            playPromise.catch(() => {
+              // Autoplay may be blocked, but controls are still visible.
+            });
+          }
+        }
+      });
+    </script>
   </body>
 </html>
